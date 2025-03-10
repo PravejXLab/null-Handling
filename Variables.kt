@@ -23,4 +23,11 @@ fun main() {    // This function tells the JVM, where to start running the code.
     name = "PravejXLab" // Because it's mutable, i have changed it.
     println(name)   // but if i try to change number, it will throw error. 
 
+    val multiLineString = """Hey, I am multi line string
+    You can put as much line you like to add.
+    This can be used to store long sentences or paragraph and 
+    it is triple quoted as you can see""" 
+
+    println(multiLineString) 
+
 }
