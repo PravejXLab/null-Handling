@@ -1,6 +1,9 @@
 fun main() {
     // Using Safe call (?.) -- It provide null instead of throwing error. 
 
+    val isSafe: String? = null  // Question mark is required to store null. 
+    println(isSafe)  // String don't allow null without (?). 
+
     print("Which is Your Favourite color: ") 
     val color = readlnOrNull()  // If input is null, output will be null not error.
     println("Your Favourite color is $color")  
@@ -39,5 +42,19 @@ fun main() {
     print("How much India scored till now: ") 
     val score = readlnOrNull()?.toIntOrNull() ?: 0 
     println("Perfect! If India scored $score")  // If user input is null or not convertible in Integer, it will show 0. 
+
+
+    // Boolean Conversion 
+    print("Enter a value, i will check if it's Boolean: ") 
+    val bool = readln().toBoolean()  // If input is true, prints true. Anything else, prints false. 
+    println("Boolean Expression: $bool")  // This is already safe, no null handling needed. 
+
+    print("Enter either true or false: ") 
+    val bools = "true"
+    val bool1 = "yes" 
+    val bool2 = bools.toBooleanStrict()  // If Input is neither true nor false, it will throw illegalArgumentException. 
+    val bool3 = bool1.toBooleanStrictOrNull()  // If error, i will provide null which can be printed. 
+    val bool4 = bool1.toBooleanStrictOrNull() ?: 0  // It will assign 0, if input is null.  
+    println(bool4)  // null generally means nothing. But if input is invalid, it is also considered as null. 
 
 }
