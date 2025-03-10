@@ -5,7 +5,6 @@ fun main() {
     val name = readln()  // This syntax will take user Input. 
     print("Please Enter your age: ") 
     val age = readln()  
-    
     println("Your name is $name and You are $age years old!") 
 
 
@@ -36,6 +35,8 @@ fun main() {
 
     val numToConvert = 20.toDouble()  // Its not necessary, we can only convert user Input. 
     println("Double of 20 is $numToConvert")  
+
+    println("Long conversion of 100 is same: ${100.toLong()} ") 
 
 // If user Input is against Expected Type, It will throw Error. 
 
